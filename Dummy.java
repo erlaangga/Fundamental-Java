@@ -12,5 +12,16 @@ public class Dummy {
 		}
 		
 		System.out.print(tes == 5150);
+		
+		double a = 5.8;
+		System.out.println("Isi nilai a: "+a);
+		int b = (int) a;
+		System.out.println("Isi nilai b: "+b);
+		double c = Math.floor(a);
+		System.out.println("Isi c: " + c);
+		int d = (int)c;
+		System.out.println("Isi d: "+d);
+		
+		if(a == 5.8) System.out.printf("Isi a adalah: %d ditambah %.1f",(int) a, a-5.0);
 	}
 }

@@ -95,7 +95,7 @@ class belajar{
 		
 		System.out.println("Panjang args: "+args.length);
 		
-		belajar meongku = new belajar();
+		belajar meongku = new belajar(); // harus membuat instance baru jika static ingin memanggil member (variabel, fungsi, dll) milik instance
 		kucing asd= meongku.new kucing();
 		System.out.println(asd.id);
 		
@@ -116,10 +116,10 @@ class belajar{
 		cobaencapsulate cobaencape = new cobaencapsulate();
 		System.out.println(cobaencape);
 		System.out.println(cobaencape.setid(123));
-		System.out.println(cobaencape.setnama("Prisca").getnama().concat(" Rety Wandari"));
-		String teks ="Masdar";
+		// Dibawah ini adalah contoh method chaining. Fungsi mengembalikan instans kelas sendiri agar dapat memanggil field di dalamnya
+		System.out.println(cobaencape.setnama("Erlangga").getnama().concat(" Indra Permana"));
+		String teks ="Pisang";
 		System.out.println(teks.substring(1));
-		
 	}
 	
 	int nambah(int a){
@@ -128,11 +128,13 @@ class belajar{
 			a = nambah(a);
 		}
 		System.out.println("Isi this: "+this);
-		System.out.println("Isi belajar.this: "+belajar.this);
+		System.out.println("Isi belajar.this: "+belajar.this); // mengembalikan nilai instance
 		meongngomong();
+		this.meongngomong(); // menggunakan this
 		return a;
 	}
 	
+	// sebuah kelas lain tidak perlu mempunyai referensi ke kelas ini untuk memanggil field yang mempunyai atribut static
 	static int nambah(){
 		return 5;
 	}

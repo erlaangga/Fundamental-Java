@@ -45,6 +45,8 @@ class oop{
 		
 		keluarga kita5;
 		keluarga2 kita52 = new keluarga2();
+		
+		// kita5 akan mempunyai instance yang sama dengan kita52
 		kita5 = kita52;
 		
 		System.out.println("isi keluarga5: " + kita5);

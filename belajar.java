@@ -26,7 +26,7 @@ class cobaencapsulate{
 		this.id = id;
 		return id;
 	}
-	// kalau tidak dedefinisikan public atributnya sudah otomatis public
+	
 	public cobaencapsulate setnama(String nama){
 		this.nama = nama;
 		return this;
